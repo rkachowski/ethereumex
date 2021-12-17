@@ -471,6 +471,8 @@ defmodule Ethereumex.Client.BaseClient do
         end)
         |> Enum.map(fn %{"result" => result} ->
           result
+          e = %{"error" => _} ->
+            e
         end)
       end
 
